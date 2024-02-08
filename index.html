@@ -5,38 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sadie's Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
-    <!-- Introduction Section -->
-    <section
-      id="intro"
-      class="min-h-screen flex items-center justify-center bg-white"
+  <body class="scroll-smooth">
+    <!-- Fixed Sidebar Navigation -->
+    <div
+      class="fixed top-1/2 transform -translate-y-1/2 left-8 bg-gray-100 rounded-3xl p-5 xl:block hidden"
     >
-      <div class="text-center">
-        <p class="text-4xl font-bold">Hi! I'm Sadie.</p>
-        <p class="text-xl mt-2">I'm a developer.</p>
-        <p class="text-lg mt-2">Design is modern.</p>
-      </div>
-    </section>
+      <nav class="flex flex-col items-center justify-center h-full space-y-4">
+        <a href="#intro" class="text-lg font-semibold">Introduction</a>
+        <a href="#section1" class="text-lg font-semibold">Title 2</a>
+        <a href="#section2" class="text-lg font-semibold">Title 3</a>
+      </nav>
+    </div>
 
-    <!-- Other Sections -->
-    <section class="min-h-screen flex items-center justify-center bg-gray-100">
-      <div class="text-center">
-        <p class="text-2xl font-semibold">Lorem Ipsum Dolor</p>
-        <p class="mt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
-      </div>
-    </section>
+    <!-- Main Content -->
+    <div>
+      <!-- Margin left to account for sidebar -->
 
-    <section class="min-h-screen flex items-center justify-center bg-white">
-      <div class="text-center">
-        <p class="text-2xl font-semibold">Sed Do Eiusmod</p>
-        <p class="mt-2">
-          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-      </div>
-    </section>
+      <!-- Introduction Section -->
+      <section
+        id="intro"
+        class="section relative min-h-screen flex items-center justify-center bg-white"
+        data-anchor="intro"
+      >
+        <div class="text-center">
+          <p class="text-4xl font-bold">Introduction</p>
+          <p class="text-lg mt-2">
+            Hi! I'm Sadie Kim. I worked for web developer for 2 years.
+          </p>
+        </div>
+        <button
+          aria-label="Scroll to next section"
+          class="next-section-arrow absolute w-14 h-14 transform -translate-x-1/2 bottom-5 left-1/2 text-2xl cursor-pointer border-none rounded-full"
+        >
+          <img src="./arrow-down.svg" />
+        </button>
+      </section>
+
+      <!-- Other Sections -->
+      <section
+        id="section1"
+        class="section relative min-h-screen flex items-center justify-center bg-gray-100"
+        data-anchor="section1"
+      >
+        <div class="text-center">
+          <p class="text-2xl font-semibold">Lorem Ipsum Dolor</p>
+          <p class="mt-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </div>
+        <button
+          aria-label="Scroll to next section"
+          class="next-section-arrow absolute w-14 h-14 transform -translate-x-1/2 bottom-5 left-1/2 text-2xl cursor-pointer border-none rounded-full"
+        >
+          <img src="./arrow-down.svg" />
+        </button>
+      </section>
+
+      <section
+        id="section2"
+        class="section relative min-h-screen flex items-center justify-center bg-white"
+        data-anchor="section2"
+      >
+        <div class="text-center">
+          <p class="text-2xl font-semibold">Sed Do Eiusmod</p>
+          <p class="mt-2">
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <button
+          aria-label="Scroll to first section"
+          class="first-section-arrow absolute w-14 h-14 transform -translate-x-1/2 bottom-5 left-1/2 text-2xl cursor-pointer border-none rounded-full"
+        >
+          <img src="./arrow-up.svg" />
+        </button>
+      </section>
+    </div>
 
     <script src="script.js"></script>
   </body>

@@ -1,0 +1,99 @@
+/*css normalize*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which will come with default margin-left */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* responsive rem setting */
+:root {
+  /* Default font-size is 16px */
+  font-size: 100%; /* 1rem = 16px */
+}
+
+/* At a viewport width of 640px or less, decrease the font-size */
+@media (max-width: 640px) {
+  :root {
+    font-size: 87.5%; /* 1rem = 14px */
+  }
+}
+
+/* At a viewport width of 768px, increase the font-size */
+@media (min-width: 768px) {
+  :root {
+    font-size: 112.5%; /* 1rem = 18px */
+  }
+}
+
+/* At a viewport width of 1024px or more, further increase the font-size */
+@media (min-width: 1024px) {
+  :root {
+    font-size: 125%; /* 1rem = 20px */
+  }
+}
